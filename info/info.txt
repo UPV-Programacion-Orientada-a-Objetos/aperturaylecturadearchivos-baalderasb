@@ -1,0 +1,23 @@
+{
+        nombre: "Ricardo",
+        apellidos: "Balderas Briones",
+        carrera: "ITI",
+        materias: ["Programación": 5, "Estructuras de datos": 4],
+        lunes: [1, 4, 6, 7, 8],
+        martes: [3, 4, 6, 10, 11],
+        lunes: [1, 4, 6, 7, 8],
+        martes: [3, 4, 6, 10, 11],
+        viernes: [4, 5, 7],
+},
+
+{
+        nombre: "Mark",
+        apellidos: "Zuckerberg aka. Twitter's father",
+        carrera: "ITI",
+        materias: ["Base de datos": 5, "Administración de base de datos": 4],
+        lunes: [1, 4, 6, 7, 8],
+        martes: [3, 4, 6, 10, 11],
+        lunes: [1, 4, 6, 7, 8],
+        martes: [3, 4, 6, 10, 11],
+        viernes: [4, 5, 7],
+},

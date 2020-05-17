@@ -1,2 +1,2 @@
 language = "java"
-run = "java -cp . Actividad1.LecturaArchivo.java"
+run = "java -cp . Actividad1_LecturaArchivo.java"
