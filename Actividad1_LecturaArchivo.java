@@ -1,7 +1,12 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
-
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;  
+import org.apache.poi.ss.usermodel.Cell;  
+import org.apache.poi.ss.usermodel.Row;  
 
 public class Actividad1_LecturaArchivo {
 
@@ -30,6 +35,30 @@ public class Actividad1_LecturaArchivo {
         } 
     }
 
+    public static void leerArchivoDeExcel() {
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Introduzca la ubicación del archivo");
+            FileInputStream fis=new FileInputStream(new File(sc.nextLine()));  
+            HSSFWorkbook wb = new HSSFWorkbook(fis);   
+            HSSFSheet sheet=wb.getSheetAt(0);  
+
+            for (Row row: sheet) {  
+                for (Cell cell: row) {
+                    System.out.println(cell.getStringCellValue());
+                }
+            }
+
+            sc.close();
+            wb.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado, revisa la ubicación");
+            leerArchivoDeExcel();
+        } catch (IOException e) {
+            System.out.println("Archivo no encontrado, revisa la ubicación");
+            leerArchivoDeExcel();
+        }
+    }
 
     public static void dividirArchivoDeTexto(String contenido) {
         int apertura = contarCaracter(contenido, '{');
